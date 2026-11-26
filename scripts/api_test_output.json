@@ -1,0 +1,65 @@
+{
+  "testedAt": "2026-11-26T10:46:06.938Z",
+  "bmkg": {
+    "ok": true,
+    "status": 200,
+    "url": "https://api.bmkg.go.id/publik/prakiraan-cuaca?adm4=33.75.01.1003",
+    "lokasi": {
+      "adm1": "33",
+      "adm2": "33.75",
+      "adm3": "33.75.01",
+      "adm4": "33.75.01.1003",
+      "desa": "Podosugih",
+      "kecamatan": "Pekalongan Barat",
+      "kotkab": "Kota Pekalongan",
+      "lat": -6.8980621721,
+      "lon": 109.6654905789,
+      "provinsi": "Jawa Tengah",
+      "timezone": "Asia/Jakarta"
+    },
+    "sample": {
+      "datetime": "2026-11-26T11:00:00Z",
+      "t": 28,
+      "tcc": 99,
+      "tp": 0.1,
+      "weather": 3,
+      "weather_desc": "Berawan",
+      "weather_desc_en": "Mostly Cloudy",
+      "wd_deg": 324,
+      "wd": "NW",
+      "wd_to": "SE",
+      "ws": 1.4,
+      "hu": 85,
+      "vs": null,
+      "vs_text": null,
+      "time_index": "11-12",
+      "analysis_date": "2026-11-26T00:00:00",
+      "image": "https://api-apps.bmkg.go.id/storage/icon/cuaca/berawan-pm.svg",
+      "utc_datetime": "2026-11-26 11:00:00",
+      "local_datetime": "2026-11-26 18:00:00"
+    }
+  },
+  "openMeteo": {
+    "ok": true,
+    "status": 200,
+    "url": "https://api.open-meteo.com/v1/forecast?latitude=-6.8886&longitude=109.6753&current=temperature_2m,relative_humidity_2m,precipitation,weather_code,wind_speed_10m&timezone=Asia%2FJakarta",
+    "current": {
+      "time": "2026-11-26T17:45",
+      "interval": 900,
+      "temperature_2m": 30,
+      "relative_humidity_2m": 71,
+      "precipitation": 0,
+      "weather_code": 3,
+      "wind_speed_10m": 4
+    }
+  },
+  "petaBencana": {
+    "ok": true,
+    "status": 200,
+    "url": "https://api.petabencana.id/reports?disaster=flood",
+    "totalNational": 0,
+    "totalPekalongan": 0,
+    "samplePekalongan": null,
+    "sampleSchema": null
+  }
+}

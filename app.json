@@ -1,25 +1,73 @@
 {
   "expo": {
-    "name": "siaga-banjir",
-    "slug": "siaga-banjir",
+    "name": "Siaga Banjir Pekalongan",
+    "slug": "siaga-banjir-pekalongan",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B3C6D"
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "id.pekalongan.siagabanjir",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Aplikasi membutuhkan akses lokasi GPS untuk menandai titik kejadian banjir secara akurat.",
+        "NSCameraUsageDescription": "Aplikasi membutuhkan akses kamera untuk mengambil foto bukti kondisi banjir di lapangan."
+      }
     },
     "android": {
+      "package": "id.pekalongan.siagabanjir",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#0B3C6D"
       },
-      "predictiveBackGestureEnabled": false
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "web": {
+      "bundler": "metro",
+      "output": "static",
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Izinkan Siaga Banjir mengakses lokasi Anda untuk menandai titik banjir."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Izinkan Siaga Banjir mengakses galeri untuk melampirkan foto banjir.",
+          "cameraPermission": "Izinkan Siaga Banjir mengakses kamera untuk memotret kondisi banjir."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "49eb54a0-9b1f-415d-aa36-049fc34caad8"
+      }
     }
   }
 }
